@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: sa
+    url: jdbc:h2:mem:dcbapp_dev
+    username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  config:
+    activate:
+      on-profile: dev
+
+
+
+---
+
+  spring:
+    datasource:
+      driver-class-name: org.h2.Driver
+      password: sa
+      url: jdbc:h2:mem:dcbapp_production
+      username: sa
+    h2:
+      console:
+        enabled: true
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+    config:
+      activate:
+        on-profile: production
+
+---
+
+Spring:
+  profiles:
+    active: dev
